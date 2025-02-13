@@ -1,0 +1,3 @@
+publish:
+  whoami: main
+  subdir: output/abc
