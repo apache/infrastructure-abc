@@ -1,0 +1,2 @@
+# Roughly the same as the global CSP, but with carve-outs for blocky and ipify
+Header set Content-Security-Policy "default-src 'self' data: blob: 'unsafe-inline' https://analytics.apache.org/; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://analytics.apache.org/; style-src 'self' 'unsafe-inline' data:; frame-ancestors 'self'; frame-src 'self' data: blob:; img-src 'self' data: https://*.apache.org/; worker-src 'self' data: blob:; connect-src https://api.ipify.org/ https://blocky.apache.org;"
