@@ -99,14 +99,17 @@
             <div class="card" style="width: 100%; margin-top: 10px;" id="debug">
                 <div class="card-body">
                     <h5 class="card-title">Troubleshooting connectivity issues: If you don't show as blocked, but you still cannot connect to our services</h5>
-                    <p class="card-text">bla bla bla</p>
-                    <p class="card-text">Something something <kbd>traceroute issues.apache.org</kbd></p>
+                    <p class="card-text">The first step in troubleshooting external connectivity issues with the ASF is (and will always be) to run a trace-route tool on the hostname of the service you are trying to connect to.</p>
+                    <p class="card-text">The <kbd>traceroute</kbd> tool may be called something else, like <kbd>tracert</kbd> on Windows, so keep that in mind.</p>
+                    <p class="card-text">Start by running the following in a command or terminal window: <kbd>traceroute <span class="text-danger">servicename.apache.org</span></kbd>, where <span class="text-danger">servicename.apache.org</span> is the hostname you are unable to connect properly to.</p>
+                    <p class="card-text">If the traceroute output indicates that you are being blocked at a certain point, you can use this information to find the proper data center or peering contact for resolving this issue.</p>
                     <p class="card-text">For a more in-depth information on how traceroute works, please see the following external articles:
                         <ul>
                             <li><a href="https://www.varonis.com/blog/what-is-traceroute">What is Traceroute? How It Works and How to Read Results</a> - by Varonis</li>
                             <li><a href="https://www.catchpoint.com/network-admin-guide/how-to-read-a-traceroute">How to Read a Traceroute</a> - by Catchpoint</li>
                         </ul>
                     </p>
+                    <p class="card-text">If the traceroute shows that there either is no blockage, or that the blockage is with our ingress IP, and you do not find your IP address(es) listed in the "<a href="#blockcheck">Have I been blocked?</a>" directory, please reach out to us as <kbd>abuse@infra.apache.org</kbd> and we will help you further.</p>
 
                 </div>
             </div>
