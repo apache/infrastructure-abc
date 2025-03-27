@@ -24,7 +24,14 @@ const block_rules = {
     },
     "BL006": {
         "title": "More than 100,000 repository.a.o visits per day",
-        "description": ""
+        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories,\n" +
+            "and should only be used for the testing of pre-production ASF code artifacts.\n" +
+            "\n" +
+            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central If you have been blocked due to excessive use of repository.apache.org, please evaluate your\n" +
+            "systems and update your configuration to use Maven Central, not repository.apache.org or\n" +
+            "people.apache.org, and let us know the results of your investigation.\n" +
+            "\n" +
+            "We will then review the ban on your IP address."
     },
     "BL007": {
         "title": "More than 1,000 viewvc visits in a day",
@@ -44,11 +51,19 @@ const block_rules = {
     },
     "BL011": {
         "title": "More than 25,000 visits to archive.apache.org within 24h",
-        "description": ""
+        "description": "The ASF software archive at archive.apache.org is designed to make older versions of ASF software available for occasional download.\n" +
+            "\n" +
+            "It is not meant to be used as a CI target for specific versions of our software.\n" +
+            "\n" +
+            "Please cache such artifacts locally if you expect to use them in a CI context, either on disk or through a caching proxy."
     },
     "BL012": {
         "title": "Excessive use of archive.a.o (>40GB per week)",
-        "description": ""
+        "description": "The ASF software archive at archive.apache.org is designed to make older versions of ASF software available for occasional download.\n" +
+            "\n" +
+            "It is not meant to be used as a CI target for specific versions of our software.\n" +
+            "\n" +
+            "Please cache such artifacts locally if you expect to use them in a CI context, either on disk or through a caching proxy."
     },
     "BL013": {
         "title": "BugZilla scraping (more than 800 requests in a single hour)",
