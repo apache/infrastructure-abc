@@ -67,7 +67,7 @@ const block_rules = {
     },
     "BL013": {
         "title": "BugZilla scraping (more than 800 requests in a single hour)",
-        "description": "Here we'll put a more detailed description of the issue and things..."
+        "description": ""
     },
     "BL014": {
         "title": "Openoffice Wiki scraping (more than 1000 requests in a single hour)",
