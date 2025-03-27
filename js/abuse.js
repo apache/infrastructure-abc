@@ -8,7 +8,7 @@ const block_rules = {
     },
     "BL002": {
         "title": "More than 2,500 rate-limited (code 429) responses not honored",
-        "description": ""
+        "description": "Many of our services make use of rate-limiting for compute or data intensive tasks, and will respond with a 429 HTTP response code (Too Many Requests).\nUsers of our services are expected to detect rate-limiting responses and act accordingly, slowing down their request rate."
     },
     "BL003": {
         "title": "More than 25,000 JIRA pageviews per hour",
@@ -72,11 +72,27 @@ const block_rules = {
     },
     "BL018": {
         "title": "Too many 404s on repository.a.o (bad CI configs looking for maven repos)",
-        "description": ""
+        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, \n" +
+            "and should only be used for the testing of pre-production ASF code artifacts.\n" +
+            "\n" +
+            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
+            "\n" +
+            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your \n" +
+            "systems and update your configuration to use Maven Central, not repository.apache.org or \n" +
+            "people.apache.org, and let us know the results of your investigation. \n" +
+            "We will then review the ban on your IP address."
     },
     "BL019": {
         "title": "Too many 404s on people.a.o (bad CI configs looking for maven repos)",
-        "description": ""
+        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, \n" +
+            "and should only be used for the testing of pre-production ASF code artifacts.\n" +
+            "\n" +
+            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
+            "\n" +
+            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your \n" +
+            "systems and update your configuration to use Maven Central, not repository.apache.org or \n" +
+            "people.apache.org, and let us know the results of your investigation. \n" +
+            "We will then review the ban on your IP address."
     },
     "BL020": {
         "title": "Too many 404s on Apache NetBeans BugZilla (buglist.cgi scraper)",
@@ -306,9 +322,12 @@ function make_rule_accordion(adiv, rules) {
         idiv.appendChild(cdiv);
         const tdiv = document.createElement('div');
         tdiv.className = "accordion-body";
-        tdiv.innerText = item.description;
+        tdiv.innerText = item.description.length ? item.description : "No specific description is available for this rule at this time.";
         cdiv.appendChild(tdiv);
         adiv.appendChild(idiv);
+        const advice = document.getElementById('general_block_advice').cloneNode(true);
+        advice.style.display = "block";
+        tdiv.appendChild(advice);
     }
 }
 
