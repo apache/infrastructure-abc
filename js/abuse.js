@@ -72,26 +72,26 @@ const block_rules = {
     },
     "BL018": {
         "title": "Too many 404s on repository.a.o (bad CI configs looking for maven repos)",
-        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, \n" +
+        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, " +
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
             "\n" +
-            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your \n" +
-            "systems and update your configuration to use Maven Central, not repository.apache.org or \n" +
-            "people.apache.org, and let us know the results of your investigation. \n" +
+            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
+            "systems and update your configuration to use Maven Central, not repository.apache.org or " +
+            "people.apache.org, and let us know the results of your investigation. \n\n" +
             "We will then review the ban on your IP address."
     },
     "BL019": {
         "title": "Too many 404s on people.a.o (bad CI configs looking for maven repos)",
-        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, \n" +
+        "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, " +
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
             "\n" +
-            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your \n" +
-            "systems and update your configuration to use Maven Central, not repository.apache.org or \n" +
-            "people.apache.org, and let us know the results of your investigation. \n" +
+            "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
+            "systems and update your configuration to use Maven Central, not repository.apache.org or " +
+            "people.apache.org, and let us know the results of your investigation. \n\n" +
             "We will then review the ban on your IP address."
     },
     "BL020": {
