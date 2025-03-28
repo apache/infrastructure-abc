@@ -150,8 +150,9 @@
             <div class="card" style="width: 100%; margin-top: 10px;" id="bots">
                 <div class="card-body">
                     <h5 class="card-title">How we deal with bots and scrapers</h5>
-                    <p class="card-text">bla bla bla</p>
-                    <p class="card-text">Insert some text here...</p>
+                    <p class="card-text">The ASF uses <a href="https://svn.apache.org/robots.txt">robots.txt</a> for managing scrapers and bots. We generally don't mind bots that respect <kbd>crawl-delay</kbd> settings, and you can request your robot user-agent be added to the allowed list, provided you can provide a reasonable argument for it. If you want your bot added to the allow-list, please reach out to users@infra.apache.org-</p>
+                    <p class="card-text">We also employ ASN tracking in our global block system, and check for distributed scanners that belong to certain companies or data centers. Although our general block rules are made with single IP addresses in mind, we also block distributed abuse when found. Spreading your requests out over multiple IPs or data centers is not a valid excuse for abuse.</p>
+                    <p class="card-text">In general, be mindful of 429 HTTP response codes and consider your fellow people on this planet when you use our resources. We offer our services for free, with the understanding that people do not abuse them.</p>
                 </div>
             </div>
 
