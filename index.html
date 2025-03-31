@@ -168,9 +168,20 @@
                             <li>Have you considered using a caching forward proxy for these packages?</li>
                         </ul>
                     </li>
-                    <li>How often do you <b>really</b> need to request data from ASF services, how important is the freshness of data?</li>
-                    <li>Are there other ways you can get the needed data or information without over-encumbering ASF services?</li>
-                    <li>If the requests are spread out across an organization, have you considered having a central orchestrator of requests to help control the flow of traffic?</li>
+                    <li>
+                        If you scrape or fetch data from us on a schedule, you may have been blocked to prevent service disruptions. Consider the following:
+                        <ul>
+                            <li>Are your data scrapers respecting robots.txt?</li>
+                            <li>Are you respecting 429 HTTP responses?</li>
+                        </ul>
+                    </li>
+                    <li>For all situations, consider:
+                        <ul>
+                            <li>How often do you <b>really</b> need to request data from ASF services, how important is the freshness of data?</li>
+                            <li>Are there other ways you can get the needed data or information without over-encumbering ASF services?</li>
+                            <li>If the requests are spread out across an organization, have you considered having a central orchestrator of requests to help control the flow of traffic?</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
