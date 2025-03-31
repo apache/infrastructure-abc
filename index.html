@@ -90,23 +90,23 @@
 
             <div class="card" style="width: 100%; margin-top: 10px;" id="what">
                 <div class="card-body">
-                    <h5 class="card-title">What to do if you have been blocked by us</h5>
-                    <p class="card-text">If a search for your IP or IP range yields a result in our block database, there are generally two ways to go from there: </p>
+                    <h5 class="card-title">What to do if we have blocked you</h5>
+                    <p class="card-text">If a search for your IP or IP range yields a result in our block database, there are generally two ways forward: </p>
                     <ol>
                         <li>You can conform your usage of our resources and services to be within the acceptable range as laid out in our policies</li>
-                        <li>In <b>rare</b> cases, we can offer an exemption to the rules. We will consider this <b>only</b> if there is a mutual benefit to the solution, be prepared to be told no.</li>
+                        <li>Explain why we should make an exception in your case. We do this <b>very rarely</b>. You need to explain (see below for instructions) how both you and we will benefit from this exception. Be prepared for us to say no.</li>
                     </ol>
 
-                    <p class="card-text">Option one is straight forward and is what most users will want to look at. Each block entry has a <kbd>BLxxx</kbd> code that can be clicked on to view details of the specific rule and its rationale, as well as (in some complex cases) steps for remediation.</p>
-                    <p class="card-text">The over-arching rule of thumb for all infractions is this: <b>don't cross the limits.</b></p>
+                    <p class="card-text">Option one is straightforward and is what most users will want to look at. Each block entry has a <kbd>BLxxx</kbd> code that you can click to view details of the specific rule and its rationale, as well as (in some complex cases) steps for remediation.</p>
+                    <p class="card-text">The over-arching rule for all infractions is this: <b>don't cross the limits.</b></p>
 
-                    <p class="card-text">When you have addressed the underlying cause of abuse (or wish to request an exemption), please contact <kbd>abuse@infra.apache.org</kbd> and provide the following information to us:</p>
+                    <p class="card-text">When you have addressed the underlying cause of abuse (or wish to request an exception), contact <kbd>abuse@infra.apache.org</kbd> and provide the following information:</p>
                     <ol>
-                        <li>The entity you are representing, either you as a private person or the corporation you are speaking on behalf of. If your corporation owns the ASN associated with the IP or IPs that are blocked, please mention the ASN as well.</li>
+                        <li>The entity you are representing, either you as a private person or the corporation you are speaking on behalf of. If your corporation owns the ASN associated with the IP or IPs that we blocked, please mention the ASN as well.</li>
                         <li>The IP or IPs that are being blocked. This can be a list of IPs or one or more ranges using CIDR notation.</li>
                         <li>The rule that was broken (you can use the shorthand BLxxx reference if you wish).</li>
                         <li>Any process-related context that you may wish to supply us, such as why we are seeing this influx of resource usage.</li>
-                        <li>The steps that you have taken to address the abuse on your side, or in the case of requesting an exemption, the rationale for said exemption as well as why or how the ASF would benefit from this.</li>
+                        <li>The steps that you have taken to address the abuse on your side, or, in the case of requesting an exception, the rationale for said exception as well as why or how the ASF would benefit from our granting it.</li>
                     </ol>
 
                     Once we have received your request, we will process it and either remove the block right away or request additional information.
@@ -118,16 +118,16 @@
                 <div class="card-body">
                     <h5 class="card-title">Troubleshooting connectivity issues: If you don't show as blocked, but you still cannot connect to our services</h5>
                     <p class="card-text">The first step in troubleshooting external connectivity issues with the ASF is (and will always be) to run a trace-route tool on the hostname of the service you are trying to connect to.</p>
-                    <p class="card-text">The <kbd>traceroute</kbd> tool may be called something else, like <kbd>tracert</kbd> on Windows, so keep that in mind.</p>
-                    <p class="card-text">Start by running the following in a command or terminal window: <kbd>traceroute <span class="text-danger">servicename.apache.org</span></kbd>, where <span class="text-danger">servicename.apache.org</span> is the hostname you are unable to connect properly to.</p>
+                    <p class="card-text">Note: The <kbd>traceroute</kbd> tool may be called something else, like <kbd>tracert</kbd> on Windows.</p>
+                    <p class="card-text">Run the following in a command or terminal window: <kbd>traceroute <span class="text-danger">servicename.apache.org</span></kbd>, where <span class="text-danger">servicename.apache.org</span> is the hostname you are unable to connect properly to.</p>
                     <p class="card-text">If the traceroute output indicates that you are being blocked at a certain point, you can use this information to find the proper data center or peering contact for resolving this issue.</p>
-                    <p class="card-text">For a more in-depth information on how traceroute works, please see the following external articles:
+                    <p class="card-text">For more in-depth information on how traceroute works, see the following external articles:
                         <ul>
-                            <li><a href="https://www.varonis.com/blog/what-is-traceroute">What is Traceroute? How It Works and How to Read Results</a> - by Varonis</li>
-                            <li><a href="https://www.catchpoint.com/network-admin-guide/how-to-read-a-traceroute">How to Read a Traceroute</a> - by Catchpoint</li>
+                            <li><a href="https://www.varonis.com/blog/what-is-traceroute" target="_blank">What is Traceroute? How it Works and How to Read Results</a> - by Varonis</li>
+                            <li><a href="https://www.catchpoint.com/network-admin-guide/how-to-read-a-traceroute" target="_blank">How to Read a Traceroute</a> - by Catchpoint</li>
                         </ul>
                     </p>
-                    <p class="card-text">If the traceroute shows that there either is no blockage, or that the blockage is with our ingress IP, and you do not find your IP address(es) listed in the "<a href="#blockcheck">Have I been blocked?</a>" directory, please reach out to us as <kbd>abuse@infra.apache.org</kbd> and we will help you further.</p>
+                    <p class="card-text">If the traceroute shows that there is no blockage, or that the blockage is with our ingress IP, and you do not find your IP address(es) listed in the "<a href="#blockcheck">Have I been blocked?</a>" directory, please reach out to us at <kbd>abuse@infra.apache.org</kbd> and we will help you further.</p>
 
                 </div>
             </div>
@@ -136,8 +136,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Global block list rules employed by the ASF</h5>
                     <p class="card-text">
-                        Below you'll find the general rules our global, automatic blocking system is governed by.
-                        Click on a rule to learn more about what it entails and why we perform these blocks.
+                        Below you'll find the general rules that govern our global, automatic blocking system.
+                        Click a rule to learn more about what it entails and why we perform these blocks.
                     </p>
 
                     <div class="accordion" id="block_rules">
@@ -150,8 +150,8 @@
             <div class="card" style="width: 100%; margin-top: 10px;" id="bots">
                 <div class="card-body">
                     <h5 class="card-title">How we deal with bots and scrapers</h5>
-                    <p class="card-text">The ASF uses <a href="https://svn.apache.org/robots.txt">robots.txt</a> for managing scrapers and bots. We generally don't mind bots that respect <kbd>crawl-delay</kbd> settings, and you can request your robot user-agent be added to the allowed list, provided you can provide a reasonable argument for it. If you want your bot added to the allow-list, please reach out to users@infra.apache.org-</p>
-                    <p class="card-text">We also employ ASN tracking in our global block system, and check for distributed scanners that belong to certain companies or data centers. Although our general block rules are made with single IP addresses in mind, we also block distributed abuse when found. Spreading your requests out over multiple IPs or data centers is not a valid excuse for abuse.</p>
+                    <p class="card-text">The ASF uses <a href="https://svn.apache.org/robots.txt">robots.txt</a> for managing scrapers and bots. We generally don't mind bots that respect <kbd>crawl-delay</kbd> settings, and you can request your robot user-agent be added to the allowed list, provided you can supply a reasonable argument for it. If you want your bot added to the allow-list, contact users@infra.apache.org.</p>
+                    <p class="card-text">We also employ ASN tracking in our global block system, and check for distributed scanners that belong to certain companies or data centers. Although our general block rules are made with single IP addresses in mind, we also block distributed abuse when we find it. Spreading your requests out over multiple IPs or data centers is not a valid excuse for abuse.</p>
                     <p class="card-text">In general, be mindful of 429 HTTP response codes and consider your fellow people on this planet when you use our resources. We offer our services for free, with the understanding that people do not abuse them.</p>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                             <li>Have you considered using a caching forward proxy for these packages?</li>
                         </ul>
                     </li>
-                    <li>How often do you <b>really</b> need to request data from ASF services, how important is the freshness of data?</li>
+                    <li>How often do you <b>really</b> need to request data from ASF services, and how important is the freshness of data?</li>
                     <li>Are there other ways you can get the needed data or information without over-encumbering ASF services?</li>
                     <li>If the requests are spread out across an organization, have you considered having a central orchestrator of requests to help control the flow of traffic?</li>
                 </ul>
