@@ -51,7 +51,7 @@
     for (let block_entry of blocks) {
       let bcidr = to_cidr(block_entry.ip)
       if (bcidr.contains(cidr) || cidr.contains(bcidr)) {
-        if (++c > 1000) break
+        if (++c > 100) break
 
         results.push(block_entry)
       }
