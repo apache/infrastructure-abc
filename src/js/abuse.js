@@ -163,13 +163,9 @@ export function to_cidr(ip_or_range) {
 const blockrule_re = new RegExp(/\b(BL\d\d\d)\b/, 'm')
 
 export function fixup_urls(splicer) {
-  if (typeof splicer == 'object') {
-    return splicer
-    //splicer = splicer.innerText;
-  }
   /* Array holding text and links */
   let i, m, t, textbits, url, urls
-  textbits = ''
+  textbits = []
 
   /* Find the first link, if any */
   i = splicer.search(blockrule_re)
@@ -186,7 +182,7 @@ export function fixup_urls(splicer) {
     /* Text preceding the link? add it to textbits frst */
     if (i > 0) {
       t = splicer.substring(0, i)
-      textbits += t
+      textbits.push(t)
       splicer = splicer.substring(i)
     }
 
@@ -197,8 +193,7 @@ export function fixup_urls(splicer) {
       i = m[1].length
       t = splicer.substring(0, i)
 
-      const linkrel = `<a href="${url}" class="blockrule">${m[1]}</a>`
-      textbits += linkrel
+      textbits.push(url)
       splicer = splicer.substring(i)
     }
 
@@ -207,17 +202,6 @@ export function fixup_urls(splicer) {
   }
 
   /* push the remaining text into textbits */
-  textbits += splicer
+  textbits.push(splicer)
   return textbits
-}
-
-function isArray(value) {
-  return (
-    value &&
-    typeof value === 'object' &&
-    value instanceof Array &&
-    typeof value.length === 'number' &&
-    typeof value.splice === 'function' &&
-    !value.propertyIsEnumerable('length')
-  )
 }

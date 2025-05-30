@@ -67,13 +67,6 @@
     await fetch_blocklist().then((d) => {
       blocks = d
     })
-  }}
-  onhashchange={() => {
-    if (window.location.hash) {
-      activeBlockRule = window.location.hash.substring(1)
-    } else {
-      activeBlockRule = null
-    }
   }} />
 
 {#snippet blockResults()}
@@ -92,7 +85,16 @@
             <tr>
               <th class="cidrblock" scope="row">{block.ip}</th>
               <td class="timeblock">{new Date(block.timestamp * 1000.0).toUTCString()}</td>
-              <td class="reasonblock">{@html fixup_urls(block.reason)}</td>
+              <td class="reasonblock">
+                {#each fixup_urls(block.reason) as text}
+                  {#if !text.startsWith('#')}
+                    {text}
+                  {:else}
+                    {@const rule = text.substring(1)}
+                    <a href={text} onclick={() => (activeBlockRule = rule)} class="blockrule btn-link">{rule}</a>
+                  {/if}
+                {/each}
+              </td>
             </tr>
           {/each}
         </tbody>
@@ -180,7 +182,7 @@
               Enter your IP address to check if you have been added to our global block list, and why. You can also
               check your entire network block as well, by using CIDR notation, e.g.
               <kbd>123.123.123.0/22</kbd> or <kbd>2001:db8::/56</kbd>. If you don't know your public IP address, you can
-              <a href={null} onclick={async () => await fill_ip()}>click here</a>
+              <a class="btn-link" href={null} onclick={async () => await fill_ip()}>click here</a>
               to automatically determine it using a third party provider (IPify).
             </p>
             IP address or range:
@@ -358,6 +360,12 @@
 </main>
 
 <style>
+  :global(body) {
+    background-color: #1b4fad;
+  }
+  :global(.btn-link) {
+    cursor: pointer;
+  }
   .subtitle {
     font-size: 1.08em;
   }
