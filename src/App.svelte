@@ -13,6 +13,7 @@
   } from '@sveltestrap/sveltestrap'
 
   import { block_rules, fetch_blocklist, to_cidr, fixup_urls } from './js/abuse.js'
+  import { VERSION } from 'svelte/compiler'
 
   let blocks = []
   let ipAddress = $state('')
@@ -60,6 +61,9 @@
     blockingReasons = results
     showBlockResults = true
   }
+
+  const APP_COMMIT = __COMMIT__
+  const APP_VERSION = __VERSION__
 </script>
 
 <svelte:window
@@ -356,6 +360,19 @@
         </Card>
       </Col>
     </Row>
+
+    <footer class="footer my-2">
+      <p>
+        Copyright © 2025, The Apache Software Foundation. Material licensed under the
+        <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, version 2.0</a>.
+      </p>
+      <p>
+        This is ABC version
+        <code>
+          <a href="https://github.com/apache/infrastructure-abc/commit/{APP_COMMIT}">{APP_VERSION}</a>
+        </code>. For inquiries, contact <a href="mailto:infra@apache.org">infra@apache.org</a>
+      </p>
+    </footer>
   </Container>
 </main>
 
@@ -388,5 +405,18 @@
     font-family: monospace;
     font-weight: bold;
     color: #930;
+  }
+  footer {
+    padding: 0.5rem;
+    background: #ffffff;
+    font-size: 15px;
+    color: #333333;
+    font-variation-settings: 'opsz' 14;
+    border-radius: 0.5rem;
+    border: 2px solid #d1d2d3;
+    text-align: center;
+  }
+  footer p {
+    margin-bottom: 0;
   }
 </style>
