@@ -13,9 +13,9 @@
   } from '@sveltestrap/sveltestrap'
 
   import { block_rules, fetch_blocklist, to_cidr, fixup_urls } from './js/abuse.js'
-  import { VERSION } from 'svelte/compiler'
+  import { onMount } from 'svelte'
 
-  let blocks = []
+  let blocks = $state(null)
   let ipAddress = $state('')
   let showBlockResults = $state(false)
   let blockingReasons = $state([])
@@ -62,16 +62,17 @@
     showBlockResults = true
   }
 
-  const APP_COMMIT = __COMMIT__
-  const APP_VERSION = __VERSION__
-</script>
-
-<svelte:window
-  onload={async () => {
+  onMount(async () => {
     await fetch_blocklist().then((d) => {
       blocks = d
     })
-  }} />
+  })
+
+  let noBlockData = $derived(blocks === null)
+
+  const APP_COMMIT = __COMMIT__
+  const APP_VERSION = __VERSION__
+</script>
 
 {#snippet blockResults()}
   {#if showBlockResults}
@@ -191,7 +192,7 @@
             </p>
             IP address or range:
             <input type="text" bind:value={ipAddress} onkeydown={is_blocked} />
-            <Button color="primary" onclick={() => is_blocked()}>Search</Button>
+            <Button disabled={noBlockData} color="primary" onclick={() => is_blocked()}>Search</Button>
             <br />
             <form>
               <div class="mb-3">
