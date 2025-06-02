@@ -1,6 +1,6 @@
 github:
   description: "Apache Infrastructure Abuse and Connectivity Help Center"
-  homepage: https://infra.apache.org/
+  homepage: https://infra.apache.org/abc
 publish:
   whoami: main
   subdir: output/abc
