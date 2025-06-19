@@ -31,6 +31,9 @@ const block_rules = {
             "systems and update your configuration to use Maven Central, not repository.apache.org or\n" +
             "people.apache.org, and let us know the results of your investigation.\n" +
             "\n" +
+            "Also, check that repository.apache.org is not included in your parent POM.\n" +
+            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
+            "\n" +
             "We will then review the ban on your IP address."
     },
     "BL007": {
