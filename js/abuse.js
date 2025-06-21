@@ -32,7 +32,7 @@ const block_rules = {
             "people.apache.org, and let us know the results of your investigation.\n" +
             "\n" +
             "Also, check that repository.apache.org is not included in your parent POM.\n" +
-            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
+            "See <a href=\"https://issues.apache.org/jira/browse/MPOM-451\">https://issues.apache.org/jira/browse/MPOM-451</a> for additional information.\n" +
             "\n" +
             "We will then review the ban on your IP address."
     },
@@ -96,7 +96,7 @@ const block_rules = {
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
             "\n" +
             "Also, check that repository.apache.org is not included in your parent POM.\n" +
-            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
+            "See <a href=\"https://issues.apache.org/jira/browse/MPOM-451\">https://issues.apache.org/jira/browse/MPOM-451</a> for additional information.\n" +
             "\n" +
             "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
             "systems and update your configuration to use Maven Central, not repository.apache.org or " +
@@ -111,7 +111,7 @@ const block_rules = {
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
             "\n" +
             "Also, check that repository.apache.org is not included in your parent POM.\n" +
-            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
+            "See <a href=\"https://issues.apache.org/jira/browse/MPOM-451\">https://issues.apache.org/jira/browse/MPOM-451</a> for additional information.\n" +
             "\n" +
             "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
             "systems and update your configuration to use Maven Central, not repository.apache.org or " +
