@@ -95,6 +95,9 @@ const block_rules = {
             "\n" +
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
             "\n" +
+            "Also, check that repository.apache.org is not included in your parent POM.\n" +
+            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
+            "\n" +
             "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
             "systems and update your configuration to use Maven Central, not repository.apache.org or " +
             "people.apache.org, and let us know the results of your investigation. \n\n" +
@@ -106,6 +109,9 @@ const block_rules = {
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
             "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
+            "\n" +
+            "Also, check that repository.apache.org is not included in your parent POM.\n" +
+            "See https://issues.apache.org/jira/browse/MPOM-451 for additional information.\n" +
             "\n" +
             "If you have been blocked due to excessive use of repository.apache.org, please evaluate your " +
             "systems and update your configuration to use Maven Central, not repository.apache.org or " +
