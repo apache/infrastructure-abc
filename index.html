@@ -42,9 +42,9 @@
         <h1 class="display-5 fw-bold" style="color: #FFF; text-align: center;">Abuse and Connectivity Issues at the ASF</h1>
         <div class="col-lg-11 mx-auto" style="color: #FFF;">
             <p class="lead mb-0" style="font-size: 1.08rem;">
-                The Apache Software Foundation provides a robust and extensive system for serving the needs of the Foundation, of our projects as they create and deploy product releases, and of people all around the world who wish to download and use those products. These services are free of charge; but we offer them with the assumption that everyone uses them appropriately.
+                The Apache Software Foundation provides a robust and extensive system for serving the needs of The Foundation, of our projects as they create and deploy product releases, and of people all around the world who wish to download and use those products. These services are free of charge; but we offer them with the assumption that everyone uses them appropriately.
 
-                If you abuse the system by overloading it in one way or another, you make it harder for others to do what they need to do. The ASF Infrastructure team will take steps to prevent abuse and restore normal access to all who rely on the ASF.
+                If you abuse the system by overloading it in one way or another, you make it harder for others to do what they need to do. The ASF Infrastructure team will take steps to prevent abuse and restore normal access to all who rely on The ASF.
             </p>
         </div>
     </div>
@@ -64,9 +64,9 @@
                     <h5 class="card-title">Have I been blocked?</h5>
                     <p class="card-text">
                         Enter your IP address to check if you have been added to our global block list, and why.
-                        You can also check your entire network block as well, by using CIDR notation, e.g.
+                        You can also check your entire network block by using CIDR notation, e.g.
                         <kbd>123.123.123.0/22</kbd> or <kbd>2001:db8::/56</kbd>.
-                        If you don't know your public IP address, you can <a href="javascript:void(fill_ip());">click here</a> to automatically determine it using a third party provider (IPify).
+                        If you don't know your public IP address, you can <a href="javascript:void(fill_ip());">click here</a> to automatically determine it using a third-party provider (IPify).
                     </p>
                     IP address or range: <input type="text" id="ip_address"/> <input type="button" value="Search" onclick="is_blocked();" class="btn btn-primary"/><br/>
                     <form>
@@ -75,7 +75,7 @@
                             <table class="table" id="block_results_table" style="visibility: hidden;">
                                 <thead id="blockheads">
                                 <tr>
-                                    <th scope="col">IP Address or Range</th>
+                                    <th scope="col">IP Address or range</th>
                                     <th scope="col">Date blocked</th>
                                     <th scope="col">Reason for block</th>
                                 </tr>
@@ -93,7 +93,7 @@
                     <h5 class="card-title">What to do if we have blocked you</h5>
                     <p class="card-text">If a search for your IP or IP range yields a result in our block database, there are generally two ways forward: </p>
                     <ol>
-                        <li>You can conform your usage of our resources and services to be within the acceptable range as laid out in our policies</li>
+                        <li>You can conform your usage of our resources and services to be within the acceptable range as laid out in our policies.</li>
                         <li>Explain why we should make an exception in your case. We do this <b>very rarely</b>. You need to explain (see below for instructions) how both you and we will benefit from this exception. Be prepared for us to say no.</li>
                     </ol>
 
@@ -102,11 +102,11 @@
 
                     <p class="card-text">When you have addressed the underlying cause of abuse (or wish to request an exception), contact <kbd>abuse@infra.apache.org</kbd> and provide the following information:</p>
                     <ol>
-                        <li>The entity you are representing, either you as a private person or the corporation you are speaking on behalf of. If your corporation owns the ASN associated with the IP or IPs that we blocked, please mention the ASN as well.</li>
+                        <li>The entity you are representing, either you as a private person or the corporation you are writing on behalf of. If your corporation owns the ASN associated with the IP or IPs that we blocked, please mention the ASN as well.</li>
                         <li>The IP or IPs that are being blocked. This can be a list of IPs or one or more ranges using CIDR notation.</li>
                         <li>The rule that was broken (you can use the shorthand BLxxx reference if you wish).</li>
                         <li>Any process-related context that you may wish to supply us, such as why we are seeing this influx of resource usage.</li>
-                        <li>The steps that you have taken to address the abuse on your side, or, in the case of requesting an exception, the rationale for said exception as well as why or how the ASF would benefit from our granting it.</li>
+                        <li>The steps that you have taken to address the abuse on your side, or, in the case of requesting an exception, the rationale for said exception as well as why or how The ASF would benefit from our granting it.</li>
                     </ol>
 
                     Once we have received your request, we will process it and either remove the block right away or request additional information.
@@ -117,7 +117,7 @@
             <div class="card" style="width: 100%; margin-top: 10px;" id="debug">
                 <div class="card-body">
                     <h5 class="card-title">Troubleshooting connectivity issues: If you don't show as blocked, but you still cannot connect to our services</h5>
-                    <p class="card-text">The first step in troubleshooting external connectivity issues with the ASF is (and will always be) to run a trace-route tool on the hostname of the service you are trying to connect to.</p>
+                    <p class="card-text">The first step in troubleshooting external connectivity issues with The ASF is (and will always be) to run a trace-route tool on the hostname of the service you are trying to connect to.</p>
                     <p class="card-text">Note: The <kbd>traceroute</kbd> tool may be called something else, like <kbd>tracert</kbd> on Windows.</p>
                     <p class="card-text">Run the following in a command or terminal window: <kbd>traceroute <span class="text-danger">servicename.apache.org</span></kbd>, where <span class="text-danger">servicename.apache.org</span> is the hostname you are unable to connect properly to.</p>
                     <p class="card-text">If the traceroute output indicates that you are being blocked at a certain point, you can use this information to find the proper data center or peering contact for resolving this issue.</p>
@@ -188,7 +188,7 @@
             <div class="card bg-success-subtle" style="display: none; padding: 6px; margin: 4px;" id="selfserve_unblock">
                 <h6 class="card-title">You can automatically unblock your IP address in some cases</h6>
                 <p class="card-text">
-                    To save both you and the ASF time and effort, we allow users to have their IP address automatically unblocked, provided you meet the criteria listed below.
+                    To save both you and The ASF time and effort, we allow users to have their IP address automatically unblocked, provided you meet the criteria listed below.
                     You must check each box to signify you have both read and understood the criterion as well as complied with any request listed.
                 </p>
                 <form onsubmit="return false;">
