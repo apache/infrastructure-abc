@@ -352,6 +352,9 @@ function make_rule_accordion(adiv, rules) {
         const advice = document.getElementById('general_block_advice').cloneNode(true);
         advice.style.display = "block";
         tdiv.appendChild(advice);
+        const ssunblock = document.getElementById('selfserve_unblock').cloneNode(true);
+        ssunblock.style.display = "block";
+        tdiv.appendChild(ssunblock);
     }
 }
 
