@@ -355,4 +355,17 @@ function make_rule_accordion(adiv, rules) {
     }
 }
 
+// self-serve unblock form
+function sl_check(form) {
+    if (form.sl1.checked && form.sl2.checked && form.sl3.checked) {
+        if (form.sl_email.value.search(/.+@.+/) !== -1) {
+            form.parentNode.innerText = `Please visit the following URL from the IP address that is blocked: https://blocky.apache.org/client_unblock?email=${form.sl_email.value}\nIn order to assure ownership, this request MUST originate from the IP address that is blocked.\nIf successful, we will send a token URL to the email address you have listed. This URL will allow you to automatically unblock your IP address immediately.`;
+        } else alert("A valid email address is required for this process.")
+    }
+    else {
+        alert("Please check all boxes to signify you have understood and followed the instructions. If you are unable to comply with the instructions, please wait till you are able to do so, or reach out to us at: abuse@infra.apache.org")
+    }
+}
+
+
 document.getElementById('ip_address').addEventListener(`keypress`, is_blocked);

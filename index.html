@@ -185,6 +185,23 @@
                 </ul>
             </div>
 
+            <div class="card bg-success-subtle" style="display: none; padding: 6px; margin: 4px;" id="selfserve_unblock">
+                <h6 class="card-title">You can automatically unblock your IP address in some cases</h6>
+                <p class="card-text">
+                    To save both you and the ASF time and effort, we allow users to have their IP address automatically unblocked, provided you meet the criteria listed below.
+                    You must check each box to signify you have both read and understood the criterion as well as complied with any request listed.
+                </p>
+                <form onsubmit="return false;">
+                <ul style="list-style: none;">
+                    <li><input type="checkbox" name="sl1"> It has been more than 24 hours since your IP address was blocked</li>
+                    <li><input type="checkbox" name="sl2"> You believe you have identified <b>and</b> addressed the underlying issue that caused the block</li>
+                    <li><input type="checkbox" name="sl3"> Your IP address has not been blocked in the past year (prior to the current block)</li>
+                    <li>Enter your email address: <input type="text" name="sl_email"> </li>
+                    <li><button class="btn btn-success" onclick="sl_check(this.form);">Retrieve unblock instructions</button> </li>
+                </ul>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
