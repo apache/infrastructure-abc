@@ -27,7 +27,7 @@ const block_rules = {
         "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories,\n" +
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
-            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central If you have been blocked due to excessive use of repository.apache.org, please evaluate your\n" +
+            "Maven Central is the correct public Java artifact service - https://repo.maven.apache.org/maven2/ If you have been blocked due to excessive use of repository.apache.org, please evaluate your\n" +
             "systems and update your configuration to use Maven Central, not repository.apache.org or\n" +
             "people.apache.org, and let us know the results of your investigation.\n" +
             "\n" +
@@ -93,7 +93,7 @@ const block_rules = {
         "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, " +
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
-            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
+            "Maven Central is the correct public Java artifact service - https://repo.maven.apache.org/maven2/\n" +
             "\n" +
             "Also, check that repository.apache.org is not included in your parent POM.\n" +
             "See <a href=\"https://issues.apache.org/jira/browse/MPOM-451\">https://issues.apache.org/jira/browse/MPOM-451</a> for additional information.\n" +
@@ -108,7 +108,7 @@ const block_rules = {
         "description": "Neither repository.apache.org nor people.apache.org are general-purpose Maven repositories, " +
             "and should only be used for the testing of pre-production ASF code artifacts.\n" +
             "\n" +
-            "Maven Central is the correct public Java artifact service - https://mvnrepository.com/repos/central\n" +
+            "Maven Central is the correct public Java artifact service - https://repo.maven.apache.org/maven2/\n" +
             "\n" +
             "Also, check that repository.apache.org is not included in your parent POM.\n" +
             "See <a href=\"https://issues.apache.org/jira/browse/MPOM-451\">https://issues.apache.org/jira/browse/MPOM-451</a> for additional information.\n" +
